@@ -4,7 +4,7 @@ import { AiOutlineLike } from "react-icons/ai";
 function Layout({thumbnail,title,likes,time}) {
 
   return (
-    <div className='shadow-md mt-4 w-80 h-fit flex flex-col mx-auto '>
+    <div className='shadow-md mt-4 w-80 h-fit flex flex-col mx-auto cursor-pointer'>
 
         <div className='bg-white w-full h-full  border border-black flex flex-col grow rounded-xl'>
         <img src={thumbnail} alt="thumbnail" width="full" height="full" />
