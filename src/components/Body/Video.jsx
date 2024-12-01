@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ReactPlayer from 'react-player'
 import thumbnail from '../../assets/thumbnail.jpg'
+import shortStory from '../../assets/shortStory.mp4'
+import { useParams } from 'react-router-dom'
+import {data} from './data'
 function Video() {
+  const { id } = useParams();
   return (
-    <div>
+    <div className='w-full h-52 '>
          <ReactPlayer
         
-        url={shortStory}
+        url={data[Number(id)-1].src}
         controls
         width="100%"
         height="100%"

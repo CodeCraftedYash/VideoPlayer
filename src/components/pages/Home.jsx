@@ -20,6 +20,7 @@ function Home() {
           title={title}
           likes={likes}
           time={time}
+          id = {id}
         />
       </div>
     ))}

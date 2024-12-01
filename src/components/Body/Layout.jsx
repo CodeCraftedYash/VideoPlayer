@@ -1,13 +1,19 @@
 import React from 'react'
 import shortStory from '../../assets/shortStory.mp4'
 import { AiOutlineLike } from "react-icons/ai";
-function Layout({thumbnail,title,likes,time}) {
-
+import { useNavigate } from 'react-router-dom';
+function Layout({thumbnail,title,likes,time,id}) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/video/${id}`)
+  }
   return (
-    <div className='shadow-md mt-4 w-80 h-fit flex flex-col mx-auto cursor-pointer'>
+    <div className='shadow-md mt-4 w-80 h-fit flex flex-col mx-auto cursor-pointer rounded-xl'
+    onClick={handleClick}
+    >
 
-        <div className='bg-white w-full h-full  border border-black flex flex-col grow rounded-xl'>
-        <img src={thumbnail} alt="thumbnail" width="full" height="full" />
+        <div className='bg-white border border-black/50 flex flex-col grow '>
+        <img src={thumbnail} alt="thumbnail" className='w-full h-52 object-cover' />
 
         <div className='flex items-center justify-between'>
 

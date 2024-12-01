@@ -7,6 +7,7 @@ import Downloads from './components/pages/Downloads';
 import Account from './components/pages/Account';
 import Home from './components/pages/Home';
 import { ThemeContextProvider, useTheme } from './components/Contexts/ThemeContext';
+import Video from './components/Body/Video';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -19,6 +20,7 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/Downloads" element={<Downloads />} />
         <Route path="/Account" element={<Account />} />
+        <Route path="/video/:id" element={<Video />} />
       </Routes>
     </div>
   );
