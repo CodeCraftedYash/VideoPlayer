@@ -13,7 +13,7 @@ function Layout({thumbnail,title,likes,time,id}) {
     >
 
         <div className='bg-white border border-black/50 flex flex-col grow '>
-        <img src={thumbnail} alt="thumbnail" className='w-full h-52 object-cover' />
+        <img src={thumbnail} alt="thumbnail" className='w-full h-52 object-fit' />
 
         <div className='flex items-center justify-between'>
 

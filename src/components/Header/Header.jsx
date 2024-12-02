@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import thunder from "../../assets/thunder.svg";
 import { motion } from "framer-motion";
 import { useTheme } from "../Contexts/ThemeContext";
 
@@ -15,7 +14,7 @@ function Header() {
   useEffect(() => {
     const interval = setInterval(() => {
       setThunderColor((prev) => (prev === "cyan" ? "blue" : "cyan"));
-    }, 1500);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -24,18 +23,15 @@ function Header() {
     <div className={`w-full flex items-center justify-between p-1 border-b-2 ${theme === 'light' ? 'border-black' : 'border-white' } `}>
       {/* Thunder Icon */}
       <div
-        className={"w-12 h-12 drop-shadow-[12px_12px_4px]"}
-        style={{
-          WebkitMaskImage: `url(${thunder})`,
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskSize: "cover",
-          maskImage: `url(${thunder})`,
-          maskRepeat: "no-repeat",
-          maskSize: "cover",
-          transition: "background-color 1.5s ease-in-out",
-          backgroundColor: thunderColor,
-        }}
-      ></div>
+        className={"w-10 h-10 drop-shadow-[2px_2px_2px] border-4 border-cyan-500"}
+        
+      >
+          <div className={"w-7 h-7 drop-shadow-[-2px_-2px_-2px] border-4 border-cyan-300 mx-auto  "}>
+          <div className={"w-4 h-4 drop-shadow-[-2px_-2px_-2px] border-4 border-cyan-100 mx-auto"}></div>
+
+          </div>
+
+      </div>
 
       {/* Centered Title and Animation */}
       <div className={`flex flex-col justify-center items-center font-bold ${theme==='light' ? 'text-black' : 'text-white'}`}>
